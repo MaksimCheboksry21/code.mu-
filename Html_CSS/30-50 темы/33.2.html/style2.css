@@ -1,0 +1,27 @@
+.aaa {
+font:40px Arial
+}
+.bbb{
+color:blue;
+}
+.ccc{
+text-align:center;
+width:500px;
+text-decoration:underline;
+}
+.ddd{
+font:30px "Times New Roman" ;
+}
+.eee{
+color:red;
+line-height:45px;
+}
+.fff{
+text-indent:35px;
+text-align:justify;
+width:500px
+}
+.kkk{
+font:bold 30px Arial;
+color:purple;
+}

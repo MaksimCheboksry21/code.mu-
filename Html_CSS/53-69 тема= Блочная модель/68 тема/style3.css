@@ -1,0 +1,12 @@
+.parent{
+display:inline-flex;
+border:1px solid red;
+margin:20px auto auto;
+
+}
+.child{
+width:120px;
+height:60px;
+border:1px solid green;
+
+}

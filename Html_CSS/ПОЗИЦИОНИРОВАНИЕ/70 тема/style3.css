@@ -1,0 +1,23 @@
+.aaa, .bbb, .zzz{
+width:50px;
+height:50px;
+position:absolute;
+}
+.aaa{
+border:1px solid red;
+left:30px;
+top:30px;
+background: #FF8888;
+}
+.bbb{
+left:60px;
+border:1px solid blue;
+top:60px;
+background:#7E89EB;
+}
+.zzz{
+left:90px;
+border:1px solid green;
+top:90px;
+background: #4DEE99;
+}
