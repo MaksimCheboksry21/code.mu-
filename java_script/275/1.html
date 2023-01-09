@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="elem" disabled>
+<input id="button" type="submit">
+<script>
+    let elem = document.querySelector('#elem');
+    let button = document.querySelector('#button');
+    button.addEventListener("click", function (){
+       button.innerHTML = (elem.disabled = false);
+    })
+</script>
+</body>
+</html>

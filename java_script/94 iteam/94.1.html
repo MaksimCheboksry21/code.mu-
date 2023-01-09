@@ -1,0 +1,59 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>			
+			let num1 = 12;
+			let num2 = 18;
+			// 1  package.json.)найдем делители того или иного числа 2) найдем общие делители 3) найдем наибольший общий делитель.
+			function Divisors(num) {
+				let result = [];
+				for(let i = 1;i <= num; i++) {
+					if(num % i == 0) {
+						result.push(i);
+					}
+				}
+				return result;
+			}
+			
+			function inArray(elem , arr) {
+				if(arr.indexOf(elem)) {
+					return true;
+					}else {
+					return false;
+				}
+			}
+			
+			function commonOwnDivisors(num1 ,num2) {
+				result = [];
+				let arr1 = Divisors(num1);
+				let arr2 = Divisors(num2);
+				
+				for(let elem of arr1) {
+					if(inArray(elem, arr2)) {
+						result.push(elem);
+					}
+				}
+				return result;
+			}
+			
+			function getGreatestCommonDivisor(num1, num2) {
+				let rt = commonOwnDivisors(num1 ,num2);
+				let result = 0; 
+				
+				for (let i = 0; i < rt.length; i++) {
+					if(rt[i + 1] > rt[i]) {
+					result = 0;
+					}else {
+					return rt[i];
+					}
+				}
+				return result;
+			}
+			
+			console.log(getGreatestCommonDivisor(num1, num2));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>										

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>text1</p>
+<p>text2</p>
+<p>text3</p>
+<script>
+    let elems = document.querySelectorAll('p');
+
+    for (let elem of elems) {
+        let span = document.createElement('span');
+        span.textContent = elem.textContent;
+        elem.textContent = '';
+        elem.appendChild(span);
+
+        let remove = document.createElement('a');
+        remove.href = '';
+        remove.textContent = 'remove';
+        elem.appendChild(remove);
+
+
+        remove.addEventListener('click', function (event){
+            span.style.textDecoration = 'line-through'
+            event.preventDefault();
+            remove.textContent = '';
+        })
+
+    }
+</script>
+</body>
+</html>

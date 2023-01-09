@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="select">
+  <option value="one">один</option>
+  <option value="two">два</option>
+  <option value="three">три</option>
+</select>
+<input id="btn" type="submit">
+<script>
+  let select = document.getElementById("select");
+  let btn = document.getElementById("btn");
+  let length = select.options.length;
+  let end = length - 1;
+    btn.addEventListener('click',function func() {
+            select[2].selected == true;
+             console.log("выбираем последний пункт из списка, а именно пункт " + (select.value = end) + " = " + (select.options[end].text) )
+    });
+</script>
+</body>
+</html>

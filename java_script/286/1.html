@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="select">
+    <option value="one">один</option>
+    <option value="two">два</option>
+    <option value="three">три</option>
+</select>
+<script>
+    let select = document.getElementById("select");
+
+    for(let option of select){
+        select.addEventListener('change',function func(){
+            if(option.selected){
+                option.text += "!";
+                this.removeEventListener('change', func);
+            }else{
+                option.text += "?";
+                this.removeEventListener('change', func);
+            }
+        });
+    }
+</script>
+</body>
+</html>

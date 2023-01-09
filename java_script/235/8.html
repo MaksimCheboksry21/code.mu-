@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let date1 = new Date(2022, 0, 1);
+  let date2 = new Date(2022, 8, 10);
+  function getNumbersOfDays(date1, date2){
+    let diff = date2 - date1;
+    let result = diff / (1000 * 60 * 60 * 24);
+    return result;
+  }
+  console.log(getNumbersOfDays(date1, date2))
+</script>
+</body>
+</html>

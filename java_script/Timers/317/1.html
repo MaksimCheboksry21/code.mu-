@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>clicked to me </p>
+<script>
+    let p = document.querySelector('p');
+
+    p.addEventListener('click', function func(){
+        setTimeout(() => alert('!'), 3000);
+        p.removeEventListener('click', func);
+    })
+</script>
+</body>
+</html>

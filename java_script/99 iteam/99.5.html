@@ -1,0 +1,47 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>		
+			function isLucky(num) {
+				let str = String(num);
+				let sum1 = 0;
+				let sum2 = 0;
+				
+				for(let i = 0; i <(str.length/2); i++) {
+					sum1 += Number(str[i]);
+				}
+				for(let i = str.length/2; i < str.length; i++) {
+					sum2 += Number(str[i]);
+				}
+				return sum1 == sum2;
+			}
+			
+			function normal(num , digitsAmount) {
+				
+				let str = String(num);
+				
+				return formStr("0", digitsAmount - str.length) + str;
+			}
+			
+			function formStr(data, length) {
+				let result = [];
+				for (let i = 0; i < length; i++) {
+					result.push(data);
+				}
+				return result.join("");
+			}
+			
+			console.log(isLucky(normal(1203, 4)));   // выведет true
+			console.log(isLucky(normal(312, 4)));    // выведет true
+			
+			console.log(isLucky(normal(6123, 6)));   // выведет true
+			console.log(isLucky(normal(600123, 6))); // выведет true
+			
+			console.log(isLucky(normal(700123, 6))); // выведет false
+			console.log(isLucky(normal(70123, 6)));  // выведет false+
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 						

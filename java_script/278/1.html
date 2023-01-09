@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="radio" name="elem"value="1">
+<input type="radio" name="elem"value="2">
+<input type="radio" name="elem"value="3" checked>
+<input id="btn" type="submit">
+<script>
+    let elems = document.querySelectorAll('input[type="radio"]');
+    let btn = document.querySelector('#btn');
+
+    btn.addEventListener('click', function (){
+        for(let elem of elems){
+            if(elem.checked){
+                console.log(elem.value);
+            }
+        }
+    })
+</script>
+</body>
+</html>

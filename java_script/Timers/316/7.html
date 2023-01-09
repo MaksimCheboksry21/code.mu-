@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Clicked me please</p>
+<script>
+  let p = document.querySelector('p');
+  let timerId;
+  let colors = ['red', 'pink', 'coral', 'orange', 'yellow' ,'green'];
+  let index = 0;
+  p.addEventListener('click', function func(){
+    timerId = setInterval(function (self){
+      p.style.setProperty('background-color', colors[index++]);
+      index %= colors.length;
+    }, 1000);
+    p.removeEventListener('click', func)
+  })
+  //https://qna.habr.com/q/707609
+</script>
+</body>
+</html>

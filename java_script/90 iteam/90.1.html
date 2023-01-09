@@ -1,0 +1,41 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>
+			//Пусть у нас дан массив с числами. Решим следующую задачу: запишем в новый массив только те элементы, сумма цифр в которых от 1  package.json. до 9.
+			let arr = [12, 19, 28, 13, 14, 345];
+			let result = [];
+			function getDigital(num) {
+				return String(num).split("");
+			}
+			
+			function getSum(arr) {
+				let sum = 0;
+				for (let elem of arr) {
+					sum += Number(elem);
+				}
+				return sum;
+			}
+			
+			function inRange(num) {
+				sum = getSum(getDigital(num));
+				if(sum >= 1 && sum <= 9) {
+					return true;
+					}else {
+					return false;
+				}
+			}
+			
+			for (let elem of arr) {
+				if(inRange(elem)){
+					result.push(elem);
+				}
+			}
+			console.log(result);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>	

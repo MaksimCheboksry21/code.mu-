@@ -1,0 +1,74 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>
+		let digitsamount = 6;
+		let num = 2406;
+		let data = "0";
+			console.log( getLuckyTickets(num, digitsamount));
+			
+			function getLuckyTickets(digitsamount) {
+				let result = [];
+				let first = getFirst(digitsamount);
+				let last = getLast(digitsamount);
+				
+				for(let i = first; i <= last; i++) {
+					let ticket = normalizeNum(num, digitsamount);
+					if(isLucky(ticket)) {
+						result.push(ticket);
+					}
+				}
+				return result;
+			}
+			
+			function getFirst(digitsamount) {
+				let result = [];
+				result.push(1);
+				for(let i = 1; i <= ((digitsamount/2)-1); i++) {
+					result.push(0);
+				}
+				result.push(1);
+				return result = result.join("");
+			}
+			
+			function getLast(digitsamount) {
+				let result = [];
+				
+				for(let i = 1; i <= digitsamount; i++) {
+					result.push(9);
+				}
+				return result = Number(result.join(""));
+			}
+			
+			function isLucky(num) {
+			num = normalizeNum(num, digitsamount);
+			let sum1 = 0;
+			let sum2 = 0;
+			
+			for(let i = 0; i < (num.length/2); i++) {
+			sum1 += Number(num[i]);
+			}
+			for (let i = num.length/2; i < num.length; i++) {
+			sum2 += Number(num[i]);
+			}
+			return sum1 == sum2;
+			}
+			
+			function normalizeNum(num, digitsamount) {
+			let str = String(num);
+			return formStr("0", digitsamount - str.length) + str;
+			}
+			
+			function formStr(data, digitsamount) {
+			let result = [];
+			for (let i = 0; i < digitsamount; i++) {
+			result.push(0);
+			}
+			return result = result.join("");
+			}	
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 	

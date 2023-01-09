@@ -1,0 +1,37 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>
+		let num = 24;
+		console.log("нетривиальные делители" + "=" + "arr" + "=" + "[" + getDivisors(num) + "]");
+			console.log( getAvg(getDivisors(num)) );
+			
+			
+			// Нахождение среднего арифметического:
+			function getAvg(arr) {
+				let rt = 0;
+				
+				for (let elem of arr) {
+					rt += elem;
+				}
+				
+				return rt / arr.length;
+			}
+			
+			// Нахождение массива делителей числа:
+			function getDivisors(num) {
+				let arr = [];
+				
+				for (let i = 2; i < num; i++) {
+					if (num % i == 0) {
+						arr.push(i);
+					}
+				}
+				return arr;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let body = document.querySelector('body');
+    let ul = document.createElement('ul');
+
+    let arr = [1, 2, 3, 4, 5];
+    for (let elem of arr) {
+        let li = document.createElement('li');
+        li.textContent = elem;
+        li.addEventListener('click', function func() {
+            let input = document.createElement('input');
+            input.value = this.textContent;
+            this.textContent = '';
+            li.appendChild(input);
+
+            input.addEventListener('blur', function () {
+                li.textContent = input.value;
+                li.addEventListener('click', func);
+            })
+            this.removeEventListener('click', func)
+        })
+        ul.appendChild(li);
+        body.appendChild(ul);
+    }
+</script>
+</html>

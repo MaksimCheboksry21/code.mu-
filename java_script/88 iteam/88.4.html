@@ -1,0 +1,27 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>
+			let num1 = 234;
+			let num2 = 551;
+			
+			function digitsSum(num) {
+			let digits = String(num).split('');
+			let digitsSum = 0;
+			for (let digit of digits) {
+				digitsSum += Number(digit);
+			}
+			return digitsSum;
+			}
+			
+			if (digitsSum(num1) == digitsSum(num2)) {
+				alert('суммы цифр совпадают');
+				} else {
+				alert('суммы цифр не совпадают');
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,24 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>
+			console.log(getFirst(6));
+			
+			function getFirst(num) {
+				let result = [];
+				result.push(1);
+				for (let i = 2; i < num;i+2) {
+					if(i == num && num > 2) {
+						result.push(0);
+					}
+				}
+				result.push(1);
+				return result = Number(result.join(""));
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 	

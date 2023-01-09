@@ -1,0 +1,22 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>
+			let nums = [123, 456, 789];
+			
+			let result = [];
+			
+			for (let num of nums) {
+				result.push(ReversArray(num));
+			}
+			console.log(result);
+			
+			function ReversArray(num) {
+				return String(num).split('').reverse().join('');
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

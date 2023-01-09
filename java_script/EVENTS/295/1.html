@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    #elem1 {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        padding: 1px;
+        background: #97FF97;
+    }
+    #elem2 {
+        width: 140px;
+        height: 140px;
+        margin: 30px;
+        padding: 1px;
+        background: #7777FF;
+    }
+    #elem3 {
+        width: 80px;
+        height: 80px;
+        margin: 30px;
+        padding: 1px;
+        background: #FF7D7D;
+    }
+
+</style>
+<body>
+<div id="elem1">
+    <div id="elem2">
+        <div id="elem3"></div>
+    </div>
+</div>
+<script>
+    let elem1 = document.querySelector('#elem1');
+    let elem2 = document.querySelector('#elem2');
+    let elem3 = document.querySelector('#elem3');
+
+    elem1.addEventListener('click', function() {
+        elem1.style.color = 'зеленый';
+        console.log('зеленый');
+    });
+    elem2.addEventListener('click', function() {
+        elem1.style.color = 'голубой';
+        console.log('голубой');
+    });
+    elem3.addEventListener('click', function() {
+        elem3.style.color = 'красный';
+        console.log('красный');
+    });
+</script>
+</body>
+</html>

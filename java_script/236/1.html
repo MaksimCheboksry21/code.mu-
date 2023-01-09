@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let now = new Date();
+    let date = new Date(now.getFullYear(), now.getMonth(),now.getDate() - 1, 24);
+    let result = (now-date) / (1000 * 60 * 60);
+    result = String(result);
+    if(Number.isInteger(result)){
+        alert(getHours(result));
+    }else{
+        alert(getHours(result) + " часов " + " " + getMinutes(result) + " минут");
+    }
+
+    function getMinutes(str){
+        let sub = str.slice(2);
+        let result = Number("0" + sub);
+        let min = Math.round(result * 60);
+        return min;
+    }
+
+    function getHours(str){
+        let hours =  Math.abs(str.slice(0, 2));
+        return hours;
+    }
+
+</script>
+</body>
+</html>

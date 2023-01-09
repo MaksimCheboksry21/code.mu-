@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let div = document.querySelector('#elem');
+
+    let arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+    let table = createTableByArr(arr);
+    div.appendChild(table);
+
+    function createTableByArr(arr) {
+        let table = document.createElement('table');
+        let getNum = (arr, table, elLength) => {
+            arr.map(elem => {
+                elem.map(num => {
+                    for (let i = 0; i < arr.length; i++) {
+                        let tr = document.createElement('tr');
+                        for (let k = 0; k < elLength; k++) {
+                            let td = document.createElement('td');
+                            td.innerHTML = num;
+                            tr.appendChild(td)
+                        }
+                        return table.appendChild(tr);
+                    }
+                });
+            })
+        }
+        let elLength = [].concat(...arr);
+        getNum(arr);
+    }
+
+    createTableByArr(arr)
+</script>
+</body>
+</html>

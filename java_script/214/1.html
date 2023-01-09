@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    function getDay() {
+        return (new Date).getDate();
+    }
+    function getMonth() {
+        let current =((new Date).getMonth()) + 1;
+        if (current < 10) current = "0" + current;
+        return current;
+    }
+    function getYear() {
+        return (new Date).getFullYear();
+    }
+
+    let [year = getYear(), month = getMonth(), day = getDay()] = arr;
+    console.log(day + "." + month + "." + year);
+</script>
+</body>
+</html>

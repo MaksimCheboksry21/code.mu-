@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">click to me</button>
+<br>
+<input type="text" class="elems">1 число<br>
+<input type="text" class="elems">2 число<br>
+<input type="text" class="elems">3 число<br>
+<script>
+    ;(function (selector1, selector2) {
+        let btn = document.querySelector(selector1);
+        let elems = document.querySelectorAll(selector2);
+
+        btn.addEventListener('click', () => console.log(getSum(elems)))
+        let getSum = (arr) => {
+            let sum = 0;
+            elems.forEach((elem) => sum += Number(elem.value));
+            return sum
+        }
+    })('#btn', '.elems')
+</script>
+</body>
+</html>

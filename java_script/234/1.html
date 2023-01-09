@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let year  = 2025;
+    let month = 0;
+    let day   = 32;
+
+    function checkDate(year, month, day) {
+        let date = new Date(year, month, day);
+        return result = date.getFullYear() == year && date.getMonth() == month && date.getDate() == day ? true : false;
+    }
+    console.log(checkDate(2025, 0, 31)); // выведет true
+    console.log(checkDate(2025, 0, 32)); // выведет false
+</script>
+</body>
+</html>

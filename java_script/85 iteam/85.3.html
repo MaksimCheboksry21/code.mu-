@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> This is my first code </title>
+<script>
+function getDivisors(num) {
+let arr = [];
+for (let i = 1; i <= num; i++) {
+if(num % i == 0){
+arr.push(i);
+}
+}
+return arr;
+}
+alert(getDivisors(36));															
+</script>
+</head>
+<body>
+</body>
+</html>

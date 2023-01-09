@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="elem" type="text">
+<script>
+    let elem = document.getElementById('elem')
+    elem.addEventListener('change', function (){
+        if(elem.value <= 5){
+            elem.style.background = 'green';
+        }else {
+            elem.style.background = 'red';
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+let date1 = new Date(2000, 0, 1);
+let date2 = new Date();
+
+for(let year = date1.getFullYear(); year <= date2.getFullYear();year++){
+
+    let date = new Date(year, 0, 1);
+    if(date.getDay() == 6 || date.getDay() == 0 ){
+        let arr = [];
+        let sum = 0;
+        arr.push(year);
+        arr.forEach(function(elem) {
+            sum += arr.indexOf(elem, 0);
+        });
+        console.log(sum);
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input id="elem" type="checkbox">
+<input id="button" type="submit">
+<p id="par"></p>
+<script>
+  let elem = document.querySelector("#elem");
+  let button = document.querySelector("#button");
+  let par = document.querySelector("p");
+
+  button.addEventListener("click", function (){
+    let result = elem.checked? par.innerText = "Hello":par.innerText = "Goodbuy";
+    console.log(result);
+  });
+</script>
+</body>
+</html>

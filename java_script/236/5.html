@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let now = new Date();
+    const getParams = (now) => new Date(now.getFullYear(), now.getMonth() - 3, now.getDate());
+
+    console.log(getParams(now));
+</script>
+</body>
+</html>

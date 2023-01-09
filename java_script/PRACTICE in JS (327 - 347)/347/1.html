@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let arr = [1, 2, 3, 4, 5];
+    for (let elem of arr) {
+        let body = document.querySelector('body');
+        let ul = document.createElement('ul');
+        let li = document.createElement('li');
+        li.textContent = elem;
+        ul.appendChild(li);
+        body.appendChild(ul);
+    }
+</script>
+</html>

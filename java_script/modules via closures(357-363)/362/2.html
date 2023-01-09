@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    ;(function () {
+        let module = {};
+        module.str1 = 'переменная модуля1';
+        module.str2 = 'переменная модуля2';
+        module.str3 = 'переменная модуля3';
+
+        module.func1 = function () {
+            alert('функция модуля1');
+        }
+        module.func2 = function () {
+            alert('функция модуля2');
+        }
+        module.func3 = function () {
+            alert('функция модуля3');
+        }
+        module.func4 = function () {
+            alert('функция модуля4');
+        }
+        module.func5 = function () {
+            alert('функция модуля5');
+        }
+
+        window.module = module;
+    })();
+
+    function getElem(obj){
+        for (let key in obj){
+            console.log(obj[key])
+        }
+    }
+     getElem2 = (obj) => console.log(Object.values(obj));
+
+
+    getElem(module)
+    getElem2(module)
+
+</script>
+</body>
+</html>

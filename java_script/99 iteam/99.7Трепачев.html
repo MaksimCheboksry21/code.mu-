@@ -1,0 +1,21 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>
+			function getFirst(num){
+				let result = [];
+				result.push(1);
+				for(let i = 1;i<=((num/2)-1);i++){
+					result.push(0);
+				}
+				result.push(1);
+				result = Number(result.join(''));
+				return result;
+			}
+			console.log(getFirst(6));
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 	

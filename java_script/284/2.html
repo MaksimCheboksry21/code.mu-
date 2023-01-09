@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="select">
+    <option value="0">Воскресенье</option>
+    <option value="1">Понедельник</option>
+    <option value="2">Вторник</option>
+    <option value="3">Среда</option>
+    <option value="4">Четверг</option>
+    <option value="5">Пятница</option>
+    <option value="6">Суббота</option>
+</select>
+<script>
+    let select = document.getElementById('select');
+    let date = new Date();
+    let currentday = date.getDay();
+console.log(currentday)
+    select.addEventListener('input', function (){
+        if(select.options[select.selectedIndex].text){
+            (select.value = currentday).selected == true
+            console.log("текущий день недели " + select[currentday].text);
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="parent"></div>
+<script>
+    let parent = document.querySelector('#parent');
+
+    let arr = [1, 2, 3, 4, 5];
+
+    for (let elem of arr) {
+        let p = document.createElement('p');
+        p.textContent = elem;
+        parent.appendChild(p);
+        p.addEventListener('click', function (){
+            p.textContent = Number(p.textContent) + 1;
+        })
+    }
+</script>
+</body>
+</html>

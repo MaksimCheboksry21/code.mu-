@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="elem">
+<script>
+    let elem = document.getElementById('elem');
+
+    elem.addEventListener('input', function (){
+        if(Number(String(elem.value).length) <= 5){
+            console.log(elem.value);
+        }else{
+            console.log("!!!")
+        }
+    })
+</script>
+</body>
+</html>

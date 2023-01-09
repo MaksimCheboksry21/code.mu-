@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="elem1" type="text">
+<input id="elem2" type="text">
+<script>
+    let elem1 = document.getElementById("elem1")
+    let elem2 = document.getElementById("elem2")
+
+    elem1.addEventListener('input', function() {
+        if((elem1.value).toString().length == 2){
+            elem2.focus();
+        }
+    });
+    elem2.addEventListener('input', function() {
+        if((elem2.value).toString().length == 2){
+            elem2.blur();
+        }
+    });
+</script>
+</body>
+</html>

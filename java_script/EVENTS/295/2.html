@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="submit">
+<p></p>
+<script>
+    let input = document.querySelector('input');
+    let p = document.querySelector('p');
+
+    input.addEventListener('click', func);
+    function func(){
+        p.textContent = alert('Например, событие focus не всплывает. В дальнейшем мы увидим и другие примеры. Однако, стоит понимать, что это скорее исключение, чем правило, всё-таки большинство событий всплывают.');
+    }
+</script>
+</body>
+</html>

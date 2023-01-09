@@ -1,0 +1,40 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>			
+			console.log(checkOneCommonDivisor(5,11));
+			function checkOneCommonDivisor(num1, num2) {
+				let divisors1 = getDivisors(num1);
+				let divisors2 = getDivisors(num2);
+				let result = getInt(divisors1,divisors2);
+				if(result.length ==1&&result[0] ==1) return true;
+				return false;
+			}
+			
+			function getDivisors(num) {
+				let result = [ ];
+				for(let i = 1; i <= num; i++) {
+					if(num%i == 0) result.push(i);
+				}
+				return result;
+			}
+			function getInt(arr1, arr2) {
+				let result = [ ];
+				
+				for (let elem of arr1) {
+					if (inArray(elem, arr2)) {
+						result.push(elem);
+					}
+				}
+				return result;
+			}
+			
+			function inArray(elem, arr){
+				return arr.indexOf(elem) !== -1;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>										

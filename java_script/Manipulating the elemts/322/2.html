@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="parent">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+
+<input type="submit" id="button">
+<script>
+    let ul = document.getElementById('parent');
+    let button = document.getElementById('button');
+    let elems = document.querySelectorAll('li');
+
+    button.addEventListener('click', function (){
+        let arr = [];
+        for(let elem of elems){
+            arr.push(elem.textContent);
+        }
+        arr = arr.reverse();
+        let result = arr.map((elem) => {
+            console.log(elem)
+            if(elem.textContent == elem){
+                (elem.textContent).remove();
+            }
+        })
+    });
+</script>
+</body>
+</html>

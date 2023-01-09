@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="elem">text</button>
+<script>
+    let elem = document.querySelector('#elem');
+
+    elem.addEventListener('click', function(event) {
+        console.log(event); // увидим объект с событием
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="parent">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<input type="submit" id="button">
+<script>
+    let ul = document.querySelector('#parent');
+    let button = document.querySelector('#button');
+    let elems = document.querySelectorAll('li');
+    let lastElement = ul.lastElementChild.innerHTML;
+    let cnt = lastElement;
+
+    button.addEventListener('click', function () {
+        let li = document.createElement('li');
+        cnt++;
+        li.innerHTML = cnt;
+        li.addEventListener('click', function (){
+            this.remove();
+        })
+
+        ul.appendChild(li);
+    });
+
+    for (let elem of elems) {
+        elem.addEventListener('click', function () {
+            this.remove();
+        })
+    }
+</script>
+</body>
+</html>

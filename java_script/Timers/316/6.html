@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p></p>
+<button id="elem1">start</button>
+<button id="elem2">stop</button>
+<script>
+    let p = document.querySelector('p');
+    let elem1 = document.getElementById('elem1');
+    let elem2 = document.getElementById('elem2');
+    let timerId;
+
+    elem1.addEventListener('click', function func() {
+        timerId = setInterval(function (self) {
+            p.innerHTML++;
+        }, 1000, this);
+        elem1.removeEventListener('click', func);
+    })
+
+    elem2.addEventListener('click', function (){
+        clearInterval(timerId);
+    })
+</script>
+</body>
+</html>

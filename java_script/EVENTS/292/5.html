@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" type="text">
+<p id="par"></p>
+<script>
+    let input = document.getElementById("input");
+    let par = document.getElementById("par");
+
+    input.addEventListener('keypress', function(event){
+        if(input.value){
+           if(event.key == "Enter"){
+               par.textContent = input.value;
+               input.value = "";
+           }
+        }
+    })
+</script>
+</body>
+</html>

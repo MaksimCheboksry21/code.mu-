@@ -1,0 +1,38 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>	
+		let arr = [1 , 3, 5, 6, 3];
+		let length = 3;
+		
+		console.log(randoms(arr, length));
+		
+			function randoms(arr, length) {
+				return first(shuffle(arr), length);
+			}
+			
+			function first(arr, length) {
+				return arr.slice(0, length);
+			}
+			
+			function shuffle(arr) {
+				let result = [];
+				
+				while (arr.length > 0) {
+					let random = getRandomInt(0, arr.length - 1);
+					let elem = arr.splice(random, 1)[0];
+					result.push(elem);
+				}
+				
+				return result;
+			}
+			
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>																	

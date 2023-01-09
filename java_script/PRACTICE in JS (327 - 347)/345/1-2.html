@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .colored{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<script>
+    let ul = document.querySelector('ul');
+    let elems = document.querySelectorAll('li');
+
+    for(let elem of elems){
+        //при одинарном нажатии красим элемент списка в красный цвет
+        elem.addEventListener('click', function (){
+            this.classList.add('colored');
+        })
+        //при двойном нажатии снимаем стиль
+        elem.addEventListener('dblclick', function (){
+            this.classList.remove('colored');
+        })
+    }
+</script>
+</body>
+</html>

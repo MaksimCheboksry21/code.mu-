@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #parent{
+            position: relative;
+        }
+        p{
+            position: absolute;
+            top: 1000px;
+        }
+    </style>
+</head>
+<body id="parent">
+<div id="elem">0:0</div>
+<p class="child" >client</p>
+<script>
+    let elem = document.getElementById('elem');
+
+    document.addEventListener('mousemove', function(event){
+        elem.innerHTML = event.pageX + ":" + event.pageY;
+    });
+</script>
+</body>
+</html>

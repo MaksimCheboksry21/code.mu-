@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    ;(function () {
+        let str1 = 'переменная модуля';
+        let str2 = 'переменная модуля';
+        let str3 = 'переменная модуля';
+
+        function func1() {
+            alert('функция модуля1');
+        }
+
+        function func2() {
+            alert('функция модуля2');
+        }
+
+        function func3() {
+            alert('функция модуля3');
+        }
+
+        window.str1 = str1;
+        window.func2 = func2;
+        window.func3 = func3;
+    })();
+    alert(str1);
+    func2();
+    func3();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let date = new Date();
+    let current = date.getDay();
+
+    function getWeek() {
+        if (current >= 1 && current <= 5) {
+            return "будний день" + "= " + current;
+        } else {
+            return "выходной день" + "= " + current;
+        }
+    }
+    console.log(getWeek(current))
+</script>
+</body>
+</html>

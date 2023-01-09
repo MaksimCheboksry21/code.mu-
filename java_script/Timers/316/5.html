@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="input" type="text">
+<input id="button" type="submit"><br>
+<p></p>
+<script>
+    let input = document.querySelector('input');
+    let button = document.querySelector('#button');
+    let p = document.querySelector('p');
+    let timerId;
+
+    button.addEventListener('click', function func() {
+        if(input.textContent !== 0){
+            p.textContent = input.value;
+            timerId = setInterval(function(self){
+                p.textContent--;
+                if(p.textContent == 0){
+                    clearInterval(timerId);
+                }
+            }, 1000, this)
+        }
+        button.removeEventListener('click', func);
+    })
+</script>
+</body>
+</html>

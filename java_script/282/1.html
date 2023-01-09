@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="select">
+    <option>one</option>
+    <option selected>two</option>
+    <option>three</option>
+</select>
+<p></p>
+<input id="btn" type="submit">
+<script>
+    let par = document.querySelector('p');
+    let select = document.getElementById('select');
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', function(){
+        par.textContent = select.value;
+    });
+</script>
+</body>
+</html>

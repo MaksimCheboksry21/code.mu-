@@ -1,0 +1,30 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>
+			let result = [];
+			let sur = [];
+			for(let j = 1; j <= 100;j++) {
+			if (isPrime(j)) {
+			result.push(j);
+			}else {
+			sur.push(j);
+			}
+			}
+			console.log(result , sur);
+			
+			function isPrime(num) {
+				for (let i = 2; i < num; i++) {
+					if (num % i == 0) {
+						return false;
+					}
+				}
+				
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

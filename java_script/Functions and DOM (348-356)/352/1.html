@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class="elem1"></p>
+<p id="elem2"></p>
+<script>
+    function appendText(selector, text) {
+        let elem = document.querySelector(selector);
+        elem.textContent = text;
+    }
+    appendText('.elem1', 'Max1');
+    appendText('#elem2', 'Max2');
+</script>
+</body>
+</html>

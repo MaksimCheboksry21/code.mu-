@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> This is my first code </title>
+<script>
+function delElem(arr , elem) {
+for(let i = 0;i < arr.length; i++) {
+if(arr[i] == elem) {
+arr[i] = arr.slice(i , 1);
+}
+}
+return arr;
+}
+let arr = [1 , 2, 2, 4, 5, 2];
+let elem = 2;
+console.log(delElem(arr, elem));		
+</script>
+</head>
+<body>
+</body>
+</html>

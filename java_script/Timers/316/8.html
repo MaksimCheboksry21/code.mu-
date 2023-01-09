@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #clock{
+            color: #0071D0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div id="clock"></div>
+<script>
+    window.onload = function(){
+        window.setInterval(function(){
+            var now = new Date();
+            var clock = document.getElementById("clock");
+            clock.innerHTML = now.toLocaleTimeString();
+        }, 1000);
+    };
+    //https://falbar.ru/article/chasy-na-javascript
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let date1 = new Date();
+    let date2 = new Date(date1.getFullYear(), date1.getMonth(), 15);
+
+    let getParams = (dat1, date2) => date1 > date2? "прошло половина месяца" : "еще нет половина месяца";
+    console.log(getParams(date1, date2))
+</script>
+</body>
+</html>

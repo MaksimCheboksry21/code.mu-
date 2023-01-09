@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parent1{
+            position: relative;
+        }
+        #parent2 > h2 {
+            text-align: center;
+        }
+        #select{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body class="parent1">
+<div id="parent2">
+    <h2 class="elem1">Дни недели</h2>
+<select id="select">
+    <option value="1">пн</option>
+    <option value="2">вт</option>
+    <option value="3">ср</option>
+    <option value="4">чт</option>
+    <option value="5">пт</option>
+    <option value="6">сб</option>
+    <option value="7">вс</option>
+</select>
+</div>
+<script>
+    let select = document.getElementById("select");
+    let weekend = [6, 7]
+    select.addEventListener("change", function (){
+        if(select.value == weekend[0] || select.value == weekend[1]){
+            alert("Выходной день");
+        }else {
+            alert("будний день");
+        }
+    });
+</script>
+</body>
+</html>

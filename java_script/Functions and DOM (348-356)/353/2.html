@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul class="parent">
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+</ul>
+<script>
+  function appendElem(selector, text){
+    let ul = document.querySelector(selector);
+    let li = document.createElement('li');
+    li.textContent = text;
+    ul.appendChild(li);
+  }
+  appendElem('.parent', 'text')
+</script>
+</body>
+</html>

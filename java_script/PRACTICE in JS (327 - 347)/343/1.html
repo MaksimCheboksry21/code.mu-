@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<p id="elem">text</p>
+<input type="submit">
+<script>
+    let elem = document.getElementById('elem');
+    let input = document.querySelector('input');
+
+    input.addEventListener('dblclick', function () {
+        elem.classList.add('hidden');
+    })
+    input.addEventListener('click', function () {
+        elem.classList.remove('hidden');
+    })
+</script>
+</body>
+</html>

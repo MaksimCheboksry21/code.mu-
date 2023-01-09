@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="elem"></ul>
+<script>
+    let ul = document.getElementById('elem');
+    let arr = [1, 2, 3, 4, 5];
+    for (let elem of arr) {
+        let li = document.createElement('li');
+        li.textContent = elem;
+        ul.appendChild(li);
+        li.addEventListener('click', function func(){
+            li.textContent += "!";
+            //отвязываем обработчик события.
+            li.removeEventListener('click', func);
+        })
+    }
+</script>
+</body>
+</html>

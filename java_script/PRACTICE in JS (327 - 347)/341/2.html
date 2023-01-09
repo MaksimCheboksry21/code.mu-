@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="parent">
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+</div>
+<script>
+    let div = document.getElementById('parent');
+    let elems = document.querySelectorAll('p');
+
+    for (let elem of elems) {
+        let span = document.createElement('span');
+        span.textContent = elem.textContent;
+        elem.textContent = '';
+        elem.appendChild(span);
+
+        let remove = document.createElement('a');
+        remove.href = '';
+        remove.textContent = 'remove';
+        elem.appendChild(remove);
+
+        span.addEventListener('click', function func() {
+            let input = document.createElement('input');
+            input.value = this.textContent;
+            this.textContent = '';
+            this.appendChild(input)
+
+            input.addEventListener('blur', function () {
+                span.textContent = this.value;
+                span.addEventListener('click', func)
+            })
+            span.removeEventListener('click', func);
+        })
+
+        remove.addEventListener('click', function (event){
+            span.remove();
+            event.preventDefault();
+        })
+
+    }
+</script>
+</body>
+</html>

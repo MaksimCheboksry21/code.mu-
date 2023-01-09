@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul id="elem">
+  <li>text</li>
+  <li>text</li>
+  <li>text</li>
+  <li>text</li>
+  <li>text</li>
+</ul>
+<script>
+  let ul = document.getElementById('elem');
+  let elems = document.querySelectorAll('li');
+
+  for(let elem of elems){
+    ul.prepend('start');
+    ul.append('finish');
+    break;
+  }
+
+</script>
+</body>
+</html>

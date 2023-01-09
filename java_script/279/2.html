@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="elem" type="checkbox">
+<script>
+  let elem = document.querySelector('#elem');
+  elem.addEventListener('change', function (){
+      if(elem.checked){
+          alert(elem.value)
+      }else{
+          alert("of")
+      }
+  })
+</script>
+</body>
+</html>

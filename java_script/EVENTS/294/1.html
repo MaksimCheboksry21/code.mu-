@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="!" >ссылка1</a>
+<a href="!!" >ссылка2</a>
+<a href="!!!" >ссылка3</a>
+<script>
+    let elems = document.querySelectorAll('a');
+    for(let elem of elems){
+        elem.addEventListener("click", function (event){
+        event.preventDefault();
+            this.textContent += elem.getAttribute("href");
+        })
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table id="table">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+</table>
+<button>Up number</button>
+<script>
+    let tds = document.querySelectorAll('#table td');
+    let button = document.querySelector('button');
+
+    button.addEventListener('click', function () {
+        for (let td of tds) {
+            td.textContent = Number(td.textContent) * 2;
+        }
+    })
+</script>
+</body>
+</html>

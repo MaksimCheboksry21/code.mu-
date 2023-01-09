@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="elem"></div>
+<script>
+    let elem = document.getElementById('elem');
+
+    for (let i = 1; i <= 5; i++){
+        let input = document.createElement('input');
+        elem.appendChild(input);
+        input.addEventListener('blur', function () {
+            let p = document.createElement('p');
+            p.textContent += input.value;
+            elem.appendChild(p);
+        })
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="elem">
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+</div>
+<script>
+    function createTable(rows, cols) {
+        let table = document.createElement('table');
+        // тут создадим таблицу с rows рядами и cols колонками
+        for (let i = 0; i < rows; i++) {
+            let tr = document.createElement('tr');
+            for (let k = 0; k < cols; k++) {
+                let td = document.createElement('td');
+                td.textContent = 'x';
+                tr.appendChild(td);
+            }
+           return  table.appendChild(tr);
+        }
+    }
+
+    let elem = document.getElementById('elem');
+    elem.appendChild(createTable(3, 4))
+</script>
+</body>
+</html>

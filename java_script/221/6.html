@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let options ={color: 'red', width: 400, height: 500};
+
+  function func({width, height}) {
+    if (options.color !== undefined) {
+      color = options.color;
+    } else {
+      color = 'black';
+    }
+    return color;
+  }
+
+  console.log(func( options ));
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> This is my first code </title>
+<script>
+function getDigitsSum(num) {
+let num = String(num);
+let arr = num.split("");
+let sum = 0;
+for (let elem of arr) {
+sum += elem;
+}
+return sum;
+}
+
+alert(getDigitsSum(1234))
+</script>
+</head>
+<body>
+</body>
+</html>

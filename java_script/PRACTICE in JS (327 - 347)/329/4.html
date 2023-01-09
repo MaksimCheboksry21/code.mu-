@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            position: absolute;
+        }
+
+        p {
+            position: relative;
+            left: 15px;
+            top: 5px;
+            font-family: "Arial Black";
+            font-size: 14px;
+        }
+
+        span {
+            position: relative;
+            left: 23px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<p>количество ячеек <span>количество столбцов</span></p>
+<input id="elem1" type="text">
+<input id="elem2" type="text">
+<table id="table"></table>
+<script>
+    let table = document.getElementById('table');
+    let elem1 = document.getElementById('elem1');
+    let elem2 = document.getElementById('elem2');
+    elem2.addEventListener('blur', function func() {
+        for (let i = 0; i < Number(elem1.value); i++) {
+            let tr = document.createElement('tr');
+
+            for (let i = 0; i < Number(elem2.value); i++) {
+                let td = document.createElement('td');
+                td.textContent = 'x';
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        elem1.value = '';
+        elem2.value = '';
+    });
+</script>
+</body>
+</html>

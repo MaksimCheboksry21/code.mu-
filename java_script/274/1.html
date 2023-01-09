@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea id="elem">Hello kid</textarea>
+<p></p>
+<script>
+    let elem = document.querySelector("#elem");
+    let elem2 = document.querySelector("p");
+    elem.addEventListener("blur",function (){
+        elem2.textContent = elem.value;
+    });
+</script>
+</body>
+</html>

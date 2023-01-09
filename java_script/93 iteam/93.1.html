@@ -1,0 +1,39 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>			
+		function inArray(elem , arr) {
+		if(arr.indexOf(elem) == -1) {
+		return true;
+		}else {
+		return false;
+		}
+		}
+		
+		function getfirstDiff(arr1, arr2) {
+		result = [];
+		for (let elem of arr1) {
+		if (inArray(elem, arr2)) {
+		result.push(elem);
+		}
+		return result;
+		}
+		}
+		
+		function getDiff(arr1, arr2) {
+		let diff1 = getfirstDiff(arr1, arr2);
+		let diff2 = getfirstDiff(arr2, arr1);
+		
+		return [].concat(diff1, diff2);
+		}
+		
+		let arr1 = [1, 2, 3];
+		let arr2 = [2, 3, 4, 5];
+		
+		console.log(getDiff(arr1, arr2));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>										

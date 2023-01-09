@@ -1,0 +1,39 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>			
+			//Сделайте функцию range принимающую параметрами 2 целых числа - начало и конец диапазона, и возвращающую массив, заполненный целыми числами из этого диапазона.
+			let num1 = 1;
+			let num2 = 10;
+			console.log(range(num1, num2));
+			console.log(shuffle(arr));
+			
+			function range(num1, num2) {
+			arr = [];
+			for(let i = num1; i <= num2; i++) {
+			arr.push(i);
+			}
+			return arr;
+			}
+			
+			function  shuffle(arr) {
+				let result = [];
+				let arr = range(num1, num2);
+				
+				while(arr.length > 0) {
+					let random = getRandomInt(arr[0], arr[arr.length - 1]);
+					let elem = arr.splice(random, 1)[0];
+					result.push(elem);
+				}
+				return result;
+			}
+			
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+		</script>
+		</head>
+		<body>
+		</body>
+	</html>																	

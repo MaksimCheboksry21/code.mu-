@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> this is my first page </title>
+<script>
+let data = [
+	{
+		1: 'data11',
+		2: 'data12',
+		3: 'data13',
+		4: 'data14',
+	},
+	{
+		1: 'data21',
+		2: 'data22',
+		3: 'data33',
+	},
+	{
+		1: 'data31',
+		2: 'data32',
+	},
+];
+
+for(let elem of data) {
+for(let key in elem) {
+console.log(elem[key]);
+}
+}
+</script>
+</head>
+<body>
+</body>
+</html>

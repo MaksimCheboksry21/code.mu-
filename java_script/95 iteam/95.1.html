@@ -1,0 +1,23 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>			
+		function getRandomInt(min , max) {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+		let arr = [];
+		let number = 100;
+		for (let i = 1; i <= number;i++) {
+		arr.push(i);
+		}
+		
+		function random (arr) {
+		return getRandomInt(arr[0], arr[arr.length - 1]);
+		}
+		console.log(random(arr));		
+		</script>
+	</head>
+	<body>
+	</body>
+</html>										

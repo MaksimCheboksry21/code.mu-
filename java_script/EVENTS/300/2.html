@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<ul>
+  <li>item <i>italic</i> item</li>
+  <li>item <i>italic</i> item</li>
+  <li>item <i>italic</i> item</li>
+  <li>item <i>italic</i> item</li>
+  <li>item <i>italic</i> item</li>
+</ul>
+<script>
+    let list = document.querySelector('ul');
+    list.addEventListener('click', function(event) {
+        let li = event.target.closest('li');
+        li.innerHTML += '!';
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" id="elem" value="1">
+<p></p>
+<script>
+    let elem = document.querySelector('#elem');
+    let p = document.querySelector('p');
+    let timerId;
+
+    elem.addEventListener('click', function func() {
+        let self = this;
+         timerId = setInterval(function () {
+            self.value = Number(elem.value) + 1;
+            if(Number(self.value) == 3){
+                p.innerHTML = "Нажмите Tab для остановки счетчика";
+            }
+        }, 1000);
+        self.removeEventListener('click', func)
+    });
+    window.addEventListener('keydown', function (event) {
+        console.log(event.code);
+        if(event.code == 'Tab')
+        clearInterval(timerId);
+    });
+</script>
+</body>
+</html>

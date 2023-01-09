@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="submit">
+<p>5</p>
+<script>
+  let input = document.querySelector('input');
+  let p = document.querySelector('p');
+
+  input.addEventListener('click',function func(){
+    setInterval(function(self){
+      p.textContent--;
+    },1000, this)
+    input.removeEventListener('click', func)
+  })
+</script>
+</body>
+</html>

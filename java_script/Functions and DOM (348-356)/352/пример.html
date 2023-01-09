@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="elem1"></p>
+<p id="elem2"></p>
+<script>
+  // Давайте сделаем функцию setText, которая первым параметром будет принимать ссылку на DOM элемент, а вторым - текст элемента:
+
+  function setText(elem, text){
+    elem.textContent = text;
+  }
+//Используем созданную нами функцию для установки текста наших абзацев:
+  let elem1 = document.getElementById('elem1');
+  setText(elem1, 'text1');
+
+  let elem2 = document.getElementById('elem2');
+  setText(elem2, 'text2');
+</script>
+</body>
+</html>

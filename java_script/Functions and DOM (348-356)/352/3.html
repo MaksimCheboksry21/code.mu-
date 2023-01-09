@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class="elem">1</p>
+<input id="button" type="submit">
+<script>
+    function setValue(selector1, selector2) {
+        let elem = document.querySelector(selector1);
+        let input = document.querySelector(selector2);
+        input.value = elem.textContent;
+    }
+
+    setValue('.elem', '#button')
+</script>
+</body>
+</html>

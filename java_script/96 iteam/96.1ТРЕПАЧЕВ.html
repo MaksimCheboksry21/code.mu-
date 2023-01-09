@@ -1,0 +1,26 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>			
+			function shuffle(arr) {
+				let result = [];
+				
+				while (arr.length > 0) {
+					let random = getRandomInt(0, arr.length - 1);
+					let elem = arr.splice(random, 1)[0];
+					result.push(elem);
+				}
+				
+				return result;
+			}
+			
+			function getRandomInt(min, max) {
+				return Math.floor(Math.random() * (max - min + 1)) + min;
+			}
+			
+			console.log(shuffle([1, 2, 3, 4, 5]));
+		</head>
+		<body>
+		</body>
+	</html>																	

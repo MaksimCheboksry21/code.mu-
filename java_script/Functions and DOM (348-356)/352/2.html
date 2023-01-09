@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class="elem">1</p>
+<p class="elem">2</p>
+<p class="elem">3</p>
+<p class="elem">4</p>
+<p class="elem">5</p>
+<script>
+    function getText(selector, text) {
+        let elems = document.querySelectorAll(selector);
+        for (let elem of elems) {
+            appendtText(elem, text);
+        }
+
+        function appendtText(elem, text) {
+            elem.textContent = text + elem.textContent;
+        }
+    }
+    getText('.elem', '!');
+</script>
+</body>
+</html>

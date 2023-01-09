@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>click to me</button>
+<table id="table"></table>
+<script>
+    let table = document.getElementById('table');
+    let button = document.querySelector('button');
+
+    button.addEventListener('click', function (){
+        let tr = document.createElement('tr');
+
+        for(let i = 1; i <= 3;i++){
+            let td = document.createElement('td');
+            td.textContent = 'x';
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    })
+</script>
+</body>
+</html>

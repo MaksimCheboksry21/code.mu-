@@ -1,0 +1,46 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>			
+			function getOwnDivisors(num) {
+			let arr = [];
+				for (let i = 0; i <= num; i++) {
+					if(num % i == 0) {
+						arr.push(i);
+					}
+				}
+				return arr;
+			}
+			
+			function getSum(arr) {
+				let sum = 0;
+				for (let elem of arr) {
+					sum += elem;
+				}
+				return sum;
+			}
+			
+			function getPerfect(num) {
+			if (getSum(getOwnDivisors(num)) == num) {
+			return true;
+			}else {
+			return false;
+			}
+			}
+			
+			let result = [];
+			for (let j = 1; j <= 1000; j++) {
+				if (getPerfect(j)) {
+					result.push(j);
+				}
+			}
+			
+			
+			console.log(result);
+			console.log(getPerfect(6));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>										

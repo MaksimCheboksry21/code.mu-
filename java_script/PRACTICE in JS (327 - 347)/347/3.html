@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let body = document.querySelector('body');
+    let ul = document.createElement('ul');
+
+    let arr = [1, 2, 3, 4, 5];
+    for (let elem of arr) {
+        let li = document.createElement('li');
+        li.textContent = elem;
+        li.addEventListener('click', function func() {
+            let input = document.createElement('input');
+            input.value = this.textContent;
+            this.textContent = '';
+            li.appendChild(input);
+
+            input.addEventListener('blur', function () {
+                li.textContent = input.value;
+                li.addEventListener('click', func);
+            })
+            this.removeEventListener('click', func)
+        })
+        ul.appendChild(li);
+        body.appendChild(ul);
+    }
+    let button = document.createElement('button');
+    let cnt = arr.length;
+    button.textContent = 'click to me';
+    ul.insertAdjacentElement('beforeend', button);
+    button.addEventListener('click', function () {
+        //добавление нового списка newli, c текстовым содержимым конечного элемента массива
+        let newli = document.createElement('li');
+        cnt++;
+        newli.textContent = cnt;
+        ul.appendChild(newli);
+
+        //добавление инпута взамен newli, с возможностью редактирования
+        newli.addEventListener('click', function getInput() {
+            let newInput = document.createElement('input');
+            newInput.value = newli.textContent;
+            newli.textContent = '';
+            newli.appendChild(newInput);
+
+            //заблюрим наш инпут по мере редактирования
+            newInput.addEventListener('blur', function () {
+                newli.textContent = newInput.value;
+                newli.addEventListener('click', getInput);
+            })
+            newli.removeEventListener('click', getInput)
+        })
+
+    })
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>
+			console.log(getFirst(6));
+			
+			function getFirst(num) {
+				let result = [];
+				let sum = [];
+				let cnt = sum.join("");
+			
+				
+				for(let i = 2; i <= num; i+2) {
+					if( i == num) {
+						result = "1"+ cnt + "1";
+					}
+				}
+				
+				for (let k = 2;k <= num; k+2 ) {
+					if(num > 2) {
+						sum += "0";
+					}
+				}
+				return Number(result.join(""));
+			}
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 							

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      div, ul, li {
+          padding: 20px;
+      }
+
+      div {
+          border: 1px solid red;
+      }
+
+      ul {
+          border: 1px solid orange;
+      }
+
+      li {
+          border: 1px solid green;
+      }
+  </style>
+</head>
+<body>
+<div>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</div>
+<script>
+    let div = document.querySelector('div');
+    let elems = document.querySelectorAll('li');
+
+    div.addEventListener('click', function (event) {
+
+        let current = event.target.tagName.toLowerCase();
+        switch (current) {
+            case 'div':
+                console.log('клик именно по div');
+                break;
+            case 'ul':
+                console.log('клик именно по ul');
+                break;
+            case 'li':
+                console.log('клик именно по li');
+                break;
+        }
+    })
+</script>
+</body>
+</html>

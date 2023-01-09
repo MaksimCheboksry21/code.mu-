@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="parent">
+    <p id="elem">text</p>
+</div>
+<script>
+    let elem = document.getElementById('elem');
+
+    elem.addEventListener('click', function func() {
+        let input = document.createElement('input');
+        input.value = elem.textContent;
+
+        input.addEventListener('blur', function () {
+            elem.textContent = this.value;
+            this.remove();
+        })
+        elem.parentElement.appendChild(input);
+        this.removeEventListener('click', func)
+    })
+</script>
+</body>
+</html>

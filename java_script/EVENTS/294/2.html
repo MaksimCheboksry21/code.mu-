@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="elem1" type="text">
+<input id="elem2" type="text">
+<p></p>
+<a href="hello">ссылка</a>
+<script>
+    let input1 =document.getElementById('elem1');
+    let input2 =document.getElementById('elem2');
+    let p = document.querySelector('p');
+    let a = document.querySelector('a');
+
+    a.addEventListener('click', function (event){
+        let value1 = input1.value;
+        let value2 = input2.value;
+    if(value1 !== 0 || value2 !== 0){
+        event.preventDefault();
+        p.textContent = Number(value1) + Number(value2);
+        input1.value = "";
+        input2.value = "";
+     }
+    })
+</script>
+</body>
+</html>

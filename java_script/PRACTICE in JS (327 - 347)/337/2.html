@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<table id="table">
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<button>click</button>
+<script>
+    let table = document.querySelector('#table');
+    let button = document.querySelector('button');
+
+    button.addEventListener('click', function () {
+        let trs = document.querySelectorAll('#table tr');
+        let tr = document.createElement('tr');
+        for (let tr of trs) {
+            let td = document.createElement('td');
+            let remove = document.createElement('a');
+            remove.href = '';
+            remove.textContent = 'remove';
+            td.appendChild(remove);
+            tr.appendChild(td);
+            remove.addEventListener('click', function (event){
+                td.remove();
+                event.preventDefault();
+            })
+
+        }
+        table.appendChild(tr);
+    })
+
+</script>
+</body>
+</html>

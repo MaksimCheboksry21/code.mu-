@@ -1,0 +1,46 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>
+			console.log(Tickets());
+			
+			function Tickets(){
+				let result = [];
+				for(let i = 1001; i <= 999999; i++){
+					if( isLucky(normal(i, 6)) ) {
+						result.push(i);
+					}
+				}
+				return result;
+			}
+			
+			function isLucky(num) {
+				let str = String(num);
+				
+				let sum1 = Number(str[0]) + Number(str[1]) + Number(str[2]);
+				let sum2 = Number(str[3]) + Number(str[4]) + Number(str[5]);
+				
+				return sum1 == sum2;
+			}
+			
+			function normal(num , digitsAmount) {
+				
+				let str = String(num);
+				
+				return formStr("0", digitsAmount - str.length) + str;
+			}
+			
+			function formStr(data, length) {
+				let result = [];
+				;
+				for (let i = 0; i < length; i++) {
+					result.push(data);
+				}
+				return result.join("");
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 						

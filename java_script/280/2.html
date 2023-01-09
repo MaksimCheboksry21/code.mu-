@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input id="elem" type="text">
+<p></p>
+<script>
+    let elem = document.getElementById("elem");
+    let prg = document.querySelector('p');
+
+    elem.addEventListener('input',function () {
+        let length = Number((String(elem.value)).length);
+            if (length <= 5) {
+                prg.textContent = "Осталось еще " + (5 - length) + " символов";
+            } else {
+                prg.textContent = "превышен лимит";
+            }
+    })
+</script>
+</body>
+</html>

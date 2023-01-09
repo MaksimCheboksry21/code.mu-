@@ -1,0 +1,46 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>
+			//Пусть нам нужно вывести на экран все возможные счастливые автобусные билеты. 
+			//Билет называется счастливым, если сумма первых трех цифр билета равна сумме вторых трех цифр 
+			//(будем рассматривать только билеты, в номере которых 6 цифр).
+			
+			
+			function GreatTicket() {
+				let result = [];
+				for (let i = 1001; i <= 999999; i++) {
+					if (isLuky(Norm(i))){
+						result.push(i);
+					}
+				}
+				return result;
+			}
+			
+			function isLuky(num) {
+			str = String(num);
+			 D1 = str[0] + str[1] + str[2];
+			 D2 = str[3] + str[4] + str[5];
+			 return D1 == D2;
+			}
+			
+			function Norm(num) {
+			let str = String(num);
+			if (str.length == 5) { 
+			str = "0" + str;
+			}
+			if (str.length == 4) {
+			str = "00" + str;
+			}
+			return str; 
+			}
+			
+			console.log(GreatTicket());
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 	

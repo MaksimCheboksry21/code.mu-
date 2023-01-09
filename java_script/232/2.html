@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let zero = 0;
+    let year = 2025;
+    let month = 5;
+
+    function getDay(year, month, zero) {
+        let date = new Date(year, month, zero);
+        return date.getDay();
+    }
+    console.log(getDay(year, month, zero));
+</script>
+</body>
+</html>

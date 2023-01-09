@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            padding: 30px;
+            border: 1px solid red;
+        }
+        li {
+            list-style-type: none;
+            margin-bottom: 20px;
+            border: 1px dashed black;
+        }
+    </style>
+</head>
+<body>
+<ul id="elem">
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+    <li>text</li>
+</ul>
+<script>
+    let elemUl = document.querySelector('#elem');
+    elemUl.addEventListener('click', func);
+
+    function func(event) {
+        let elemTarget = event.target.tagName.toLowerCase();
+        console.log(elemTarget);
+
+        if (elemTarget == 'ul') {
+            let newP = document.createElement('li');
+            newP.innerHTML = 'text';
+            elemUl.appendChild(newP);
+        }
+
+        if (elemTarget == 'li') {
+            event.target.textContent += '!'
+        }
+    }
+</script>
+</body>
+</html>

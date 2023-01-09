@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<p></p>
+<script>
+    let input = document.querySelector('input');
+    let p = document.querySelector('p');
+    let timerId;
+
+    input.addEventListener('focus', function func () {
+        timerId = setInterval(function (self){
+            self.value--;
+            if (self.value == 0){
+                clearInterval(timerId);
+            }
+        }, 1000, this)
+        input.removeEventListener('click',func);
+    })
+</script>
+</body>
+</html>

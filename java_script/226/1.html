@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let months = [
+        'янв', 'фев', 'мар', 'апр', 'май', 'июн',
+        'июл', 'авг', 'сен', 'окт', 'ноя', 'дек'
+    ];
+    let date = new Date();
+    let current  = date.getMonth();
+    function getMonths() {
+        for (let elem of months) {
+            if(months.indexOf(elem) == current){
+                return elem;
+            }
+        }
+    }
+    console.log(getMonths());
+</script>
+</body>
+</html>

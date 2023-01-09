@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<script>
+    let elem = document.querySelector('input');
+    let timerId;
+    elem.addEventListener('click', function func() {
+        if (elem.value !== 0) {
+           timerId = setInterval(function (self) {
+                self.value++;
+            }, 1000, this)
+        }
+        elem.removeEventListener('click',func);
+    })
+</script>
+</body>
+</html>

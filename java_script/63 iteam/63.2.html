@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+let obj = {
+	employee1: 100,
+	employee2: 200,
+	employee3: 300,
+	employee4: 400,
+	employee5: 500,
+	employee6: 600,
+	employee7: 700,
+};
+let result = {};
+for ( let elem in obj) {
+if(obj[elem] <= 400)
+result[elem]  = obj[elem] + (obj[elem] * 1/10);
+}
+console.log(result);
+ </script>
+</head>
+<body>
+</body>
+</html>

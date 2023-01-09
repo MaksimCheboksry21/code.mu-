@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<script>
+  let now = new Date();
+
+  let getPast = (now) => {
+    for (let year = now.getFullYear(); year >= 0; year--) {
+      if (year % 4 == 0) {
+        console.log(year);
+      }
+    }
+  }
+getPast(now)
+</script>
+</body>
+</html>

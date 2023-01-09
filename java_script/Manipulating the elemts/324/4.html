@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="elem" style="border: 1px solid red;">
+  <p>text</p>
+  <p>text</p>
+  <p>text</p>
+</div>
+<script>
+  let div = document.getElementById('elem');
+  let p = document.createElement('p');
+  p.textContent = '!!!';
+  div.insertAdjacentElement('afterend', p)
+</script>
+</body>
+</html>

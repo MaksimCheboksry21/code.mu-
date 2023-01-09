@@ -1,0 +1,21 @@
+<DOCTYPE html> 
+	<head>
+		<meta charset = "utf-8">
+		<title>This is my first code</title>
+		<script>
+			function getOwnDivisors(num) {
+			let result = [];
+			for (let i = 1; i < num; i++) {
+			if(num % i == 0) {
+			result.push(i);
+			}
+			}
+			return result;
+			}
+			let num = 220; 
+			console.log(getOwnDivisors(num));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>	

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table id="table"></table>
+<script>
+    let table = document.getElementById('table');
+    let employees = [
+        {name: 'employee1', age: 30, salary: 400},
+        {name: 'employee2', age: 31, salary: 500},
+        {name: 'employee3', age: 32, salary: 600},
+    ];
+
+    for (let employe of employees) {
+        let tr = document.createElement('tr');
+
+        let td1 = document.createElement('td');
+        td1.textContent = employe.name;
+        tr.appendChild(td1);
+
+        let td2 = document.createElement('td');
+        td2.textContent = employe.age;
+        tr.appendChild(td2);
+        td2.addEventListener('click', function () {
+            td2.textContent = Number(td2.textContent) + 1;
+        })
+
+        let td3 = document.createElement('td');
+        td3.textContent = employe.salary;
+        tr.appendChild(td3);
+
+        table.appendChild(tr);
+    }
+</script>
+</body>
+</html>

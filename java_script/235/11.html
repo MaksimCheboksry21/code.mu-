@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let now  = new Date();
+    let date = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 0, 0, 0);
+    function getTime(now, date) {
+       let result = (now-date) / (1000 * 60 * 60);
+        function getParamsOfData(result){
+            result = String(result);
+            if(Number.isInteger(result)){
+                return getHours(result);
+            }else{
+                return getHours(result) + "часов " + " " + getMinutes(result) + " минут";
+            }
+
+            function getMinutes(str){
+                let sub = str.slice(2);
+                let result = Number("0" + sub);
+                let min = Math.round(result * 60);
+                return min;
+            }
+
+            function getHours(str){
+                let hours = str.slice(0, 2);
+                return hours;
+            }
+        }
+    }
+    console.log(getTime(now, date))
+</script>
+</body>
+</html>

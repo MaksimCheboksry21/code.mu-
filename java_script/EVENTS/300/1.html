@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+      div, ul, li {
+          padding: 20px;
+      }
+
+      div {
+          border: 1px solid red;
+      }
+
+      ul {
+          border: 1px solid orange;
+      }
+
+      li {
+          border: 1px solid green;
+      }
+  </style>
+</head>
+<body>
+<div>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+</div>
+<script>
+    let div = document.querySelector('div');
+    let elems = document.querySelectorAll('li');
+    let ul = document.querySelector('ul');
+
+    div.addEventListener('click', function (event) {
+        let area = event.target.tagName.toLowerCase();
+
+        if (area === 'div') {
+            console.log('клик по div');
+        } else if (area === 'ul') {
+            let li = document.createElement('li');
+            li.innerHTML = 'text';
+            ul.appendChild(li);
+            console.log('клик по ul');
+
+        } else if (area === 'li') {
+            event.target.textContent += '!';
+            console.log('клик по li');
+        }
+    })
+</script>
+</body>
+</html>

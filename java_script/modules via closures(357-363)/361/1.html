@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="parent"></div>
+<script>
+    let config = {
+        root: '#parent',
+        type: 'p',
+        amount: 5
+    };
+
+    (function ({root, type, amount}) {
+        let parent = document.querySelector(root);
+
+        for (let i = 1; i <= amount; i++) {
+            let elem = document.createElement(type);
+            elem.textContent = '!';
+            parent.append(elem);
+        }
+    })(config);
+</script>
+</body>
+</html>

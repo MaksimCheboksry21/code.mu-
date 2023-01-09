@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        td {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<table id="parent">
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+<script>
+    let table = document.querySelector('#table');
+    let tds = document.querySelectorAll('td');
+
+        for (let td of tds) {
+            td.addEventListener('click', function func() {
+                let input = document.createElement('input');
+                input.value = td.textContent;
+                td.textContent = '';
+                td.appendChild(input);
+
+                input.addEventListener('blur', function () {
+                    td.textContent = input.value;
+                    td.addEventListener('click', func);
+                });
+                td.removeEventListener('click', func);
+            })
+        }
+
+</script>
+</body>
+</html>

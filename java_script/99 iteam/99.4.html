@@ -1,0 +1,32 @@
+<DOCTYPE html> 
+	<head> 
+		<meta charset ="utf-8">
+		<title> This is my first code </title>
+		<script>
+			let digitsAmount = 6;
+			let data = "0";
+			console.log(normal(123, 6)); // выведет '000123'
+			console.log(normal(1234, 6)); // выведет '001234'
+			console.log(normal(12345, 6)); // выведет '012345'
+			console.log(normal(123456, 6)); // выведет '123456'
+			
+			function normal(num , digitsAmount) {
+				
+				let str = String(num);
+				
+				return formStr(data, digitsAmount - str.length) + str;
+			}
+			
+			function formStr(data, digitsAmount) {
+				let result = "0";
+				;
+				for (let i = 1; i < digitsAmount; i++) {
+					result += "0";
+				}
+				return result;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html> 						

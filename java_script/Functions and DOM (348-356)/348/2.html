@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p class="elem1"></p>
+<p class="elem2"></p>
+<script>
+    function setAttr(selector, name, newname) {
+        let elem = document.querySelector(selector);
+        console.log(elem)
+        let getAtr = elem.getAttribute(name);
+        console.log(getAtr)
+        let newValue = document.setAttribute(getAtr, newname);
+        console.log(newValue)
+    }
+    setAttr('elem1', 'elem1','ralf')
+</script>
+</body>
+</html>

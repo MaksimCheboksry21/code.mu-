@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>Click me</button>
+<p>10</p>
+<script>
+  let button = document.querySelector('button');
+  let p = document.querySelector('p');
+  let timerId;
+  button.addEventListener('click', function func(){
+      timerId = setInterval(function (self){
+          p.textContent--;
+          if(p.textContent == 0){
+              clearInterval(timerId);
+          }
+      },1000, this)
+  button.removeEventListener('click',func);
+  })
+</script>
+</body>
+</html>

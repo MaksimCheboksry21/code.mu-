@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<select id="select">
+    <option value="1">one</option>
+    <option value="2">two</option>
+    <option value="3">three</option>
+    <option value="4">four</option>
+    <option value="5">five</option>
+</select>
+<input type="submit">
+<script>
+    let select = document.querySelector('#select');
+    let btn = document.querySelector('input');
+    btn.addEventListener('click',function (){
+        if(select.options[select.selectedIndex].text){
+            alert(select.options[select.selectedIndex].text)
+        }
+    })
+</script>
+</body>
+</html>
