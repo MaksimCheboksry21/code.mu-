@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #parent {
+            width: 200px;
+        }
+
+        .el1 {
+            white-space: pre;
+            border: 1px solid red;
+        }
+
+        .el2 {
+            white-space: pre-wrap;
+            border: 1px solid red;
+        }
+
+        .el3 {
+            white-space: pre-line;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="parent">
+    pre
+    <p class="el1">Lorem ipsum dolor sit amet,
+        consectetur adipisicing elit. Debitis earum,
+        eum fugiat ipsam libero nesciunt odit omnis perspiciatis reiciendis sapiente!</p>
+    pre-wrap
+    <p class="el2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque ducimus facilis in iure nesciunt
+                       nobis placeat ullam veniam veritatis voluptatem?</p>
+    pre-line
+    <p class="el3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto dignissimos dolores, earum
+        itaque quo repellat? Blanditiis harum porro quaerat sint!</p>
+</div>
+</body>
+</html>
